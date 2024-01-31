@@ -6,7 +6,7 @@ import NN
 path = 'SIFT'
 GetTrainAndTest.getTrain_Test(path, 8, 8, 1024, 32, "IVFPQ") 
 
-path = "SIFT10K"
+path = "GIST1M"
 dataset_type = 'IVFPQ'
 model_type = 'GAN'
 config_demo = {
@@ -20,12 +20,12 @@ config_demo = {
     'save_path': './models/model.ckpt',  # Your model will be here.
     'm': 8,                              # the number of subspaces
     "n_critic": 1,
-    "in_dim": 128,    # 数据维度
-    "workspace_dir": NN.workspace_dir,  # define in the environment setting
-    'dataset_type': 'SIFT10K'
+    "in_dim": 128,    
+    "workspace_dir": NN.workspace_dir, 
+    'dataset_type': 'GIST1M'
 }
 
-config = NN.Config(123, True, 0.2, 10, 64, 1e-4, 'GAN', './models/model.ckpt', 8, 1, 128, NN.workspace_dir, 'SIFT10K')
+config = NN.Config(123, True, 0.2, 10, 64, 1e-4, 'GAN', './models/model.ckpt', 8, 1, 128, NN.workspace_dir, 'GIST1M')
 trainer = NN.TrainerGAN(config, 128)
 trainer.train()
 
