@@ -85,5 +85,5 @@ def Get_Dataset(path):
     return list_base, list_query, list_groundtruth
 
 def test():
-    path = 'SIFT1M'
+    path = 'GIST1M'
     getTrain_Test(path)
