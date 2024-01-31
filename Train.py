@@ -14,7 +14,7 @@ def train(path, datasety_type, model_type, config):
         'batch_size': 32,
         'learning_rate': 2e-5,
         'early_stop': 400,  # If model has not improved for this many consecutive epochs, stop training.
-        'save_path': './models/SIFT10K/PQ/model.ckpt',  # Your model will be here.
+        'save_path': './models/GIST1M/PQ/model.ckpt',  # Your model will be here.
         'm': 8  # the number of subspaces
     }
     config = NN.Config(123, True, 0.2, 5000, 512, 2e-3, 400, 'models/' + path + '/' + datasety_type + '/model.ckpt', 8)
@@ -76,7 +76,7 @@ def train(path, datasety_type, model_type, config):
     NN.trainer(train_loader, valid_loader, model, config, NN.device)
 
 def test():
-    path = 'SIFT'
+    path = 'GIST'
     train(path, 'PQ')
 
 # test()
