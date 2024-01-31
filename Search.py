@@ -65,7 +65,7 @@ def sort_by_dis(t):
     return t[1]
 
 def test():
-    # path = 'SIFT1M'
+    # path = 'GIST1M'
     # Get_Pred_test(path)
     # pred_nearest(path)
     pass
