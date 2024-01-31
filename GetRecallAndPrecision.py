@@ -52,5 +52,5 @@ def Get_Recall(path):
         print("Recall@{}: {}%".format(k, recall * 100))
 
 def test():
-    path = 'SIFT1M'
+    path = 'GIST1M'
     Get_Recall(path)
