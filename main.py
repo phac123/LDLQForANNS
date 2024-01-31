@@ -3,7 +3,7 @@ import File2Csv
 import O2E
 import Train
 import NN
-path = 'SIFT'
+path = 'GIST'
 GetTrainAndTest.getTrain_Test(path, 8, 8, 1024, 32, "IVFPQ") 
 
 path = "GIST1M"
