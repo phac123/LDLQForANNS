@@ -48,7 +48,7 @@ def Vec2Csv(path):
     write2file(groundtruth, groundtruth_store_path)
 
 def test():
-    path = "SIFT10K"
+    path = "GIST1M"
     Vec2Csv(path)
 
 # test()
